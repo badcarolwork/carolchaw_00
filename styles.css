@@ -48,6 +48,19 @@ nav .navbar-nav .nav-item.active .nav-link {
   height: 55vh;
   min-height: 300px;
   border-bottom: 1px solid #dee2e6;
+  position: relative;
+}
+.header .img-holder {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.header .img-holder img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.3;
 }
 .header .container {
   display: flex;
@@ -56,6 +69,8 @@ nav .navbar-nav .nav-item.active .nav-link {
 }
 .header .container .infos {
   width: 65%;
+  position: absolute;
+  z-index: 2;
 }
 .header .container .infos .buttons button {
   background-color: #f1a703;
@@ -69,28 +84,27 @@ nav .navbar-nav .nav-item.active .nav-link {
 .header .container .infos .buttons button i {
   font-size: 20px;
 }
-.header .container .img-holder {
-  width: 45%;
-}
-.header .container .img-holder img {
-  width: 140%;
-  height: auto;
-  margin-left: -50%;
-}
 .header .container .infos .subtitle {
-  font-size: 3rem;
+  font-size: 50px;
+}
+.header .container .infos .typed {
+  font-size: 30px;
+  color: #cd9638;
+  border-bottom: 2px solid #cd9638;
 }
 .header .container .infos .title {
-  font-size: 5rem;
+  font-size: 30px;
   color: #cd9638;
 }
-.header .container .infos p {
-  font-size: 3.5rem;
+.header .container .infos .social-links {
+  padding-top: 10px;
+  font-size: 25px;
 }
 
 .section {
   position: relative;
   padding: 3rem 0;
+  padding-top: 70px;
 }
 .section.skills .lists .list {
   display: flex;
@@ -134,7 +148,7 @@ footer i {
 
 @media only screen and (max-width: 576px) {
   .header {
-    margin-top: 100px;
+    margin-top: 56px;
     height: 40vh;
   }
   .header .container .infos {
@@ -144,9 +158,6 @@ footer i {
   }
   .header .container .infos .title {
     font-size: 4rem;
-  }
-  .header .container .img-holder {
-    display: none;
   }
 }
 .bounce-in-top {
